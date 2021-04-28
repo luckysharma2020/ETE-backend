@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-style: italic;
+        }
+        form{
+            text-align: center;
+        }
+        button{
+            background-color: rgb(69, 69, 206);
+            
+        }
+    </style>
+</head>
+
+<body>
+<div id='header'>
+        <button onclick="window.location='details';">DATA</button>
+    <h1>Enter Details</h1>
+</div>
+<br>
+<form th:object="${user}" th:action="@{/users/signup}" method="POST">
+    <div id='formItems'>
+        <label>Name</label><br>
+        <input type="text" name="nme" id="name"><br><br>
+
+        <label>Age</label><br>
+        <input type="number" name="age" id="age"><br><br>
+
+        <label>Email Id:</label><br>
+        <input type="email" name="email" id="email"><br><br>
+
+        <label>Address:</label><br>
+        <input type="text" name="add" id=""add><br><br>
+
+        <label>Phone number</label><br>
+        <input type="number" name="pnum" id="pnum"><br><br>
+
+        <input type="submit" value="Signup"><br>
+
+    </div>
+</form>
+</body>
+
+</html>
